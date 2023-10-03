@@ -1,7 +1,7 @@
 import pickle
 
 cv = pickle.load(open("models/cv.pkl", 'rb'))
-clf = pickle.load(open("models/clf.pkl", 'rb'))
+clf = pickle.load(open("models/rf.pkl", 'rb'))
 
 def model_predict(email):
     if email == "":
