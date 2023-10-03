@@ -2,8 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from utils import model_predict
 
 app = Flask(__name__)
-cv = pickle.load(open("models/cv.pkl",'rb'))
-rf = pickle.load(open("models/rf.pkl",'rb'))
+
 
 @app.route('/')
 def home():
