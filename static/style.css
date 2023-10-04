@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.email-form textarea {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button-group {
+    text-align: center;
+}
+
+button.predict-button, a.reset-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+button.predict-button {
+    background-color: #4caf50; /* Green */
+}
+
+a.reset-button {
+    background-color: #2196F3; /* Blue */
+}
+
+button.predict-button:hover, a.reset-button:hover {
+    background: darken(#4caf50, 10%);
+}
+
+.prediction h2 {
+    text-align: center;
+}
+
+.prediction h2.spam {
+    color: red;
+}
+
+.prediction h2.not-spam {
+    color: green;
+}
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777; /* A subtle color for the text */
+}

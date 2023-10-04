@@ -3,41 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
     <title>Email Spam Classifier</title>
-    <style>
-        body{
-            text-align: center;
-        }
-        button{
-            color: aliceblue;
-            background-color: black;
-            width: 100px;
-            height: 40px;
-        }
-    </style>
 </head>
 <body>
-    <h1>Email Spam Classifier</h1>
-    <div>
-        <form method="POST" action="/predict">
-    <textarea name="content" cols="60" rows="15" placeholder="Enter your email text here" autocomplete="off"">{{ email }}</textarea>
-            <div>
-                <button type="submit">
-                    Submit
-                </button>
-                <button><a href="/">Reset</a></button>
-            </div>
-        </form>
-    </div>
-    <div>
-        {% if prediction %}
-        {% if prediction == 1 %}
-        <h2 style="color: red;">Spam</h2>
-        {% else %}
-        <h2 style="color: green;">Not Spam</h2>
-        {% endif %}
-        {% endif %}
-        <!-- <p id="display"> {{ prediction }}</p> -->
+    <div class="container">
+        <h1>Email Spam Classifier</h1>
+        <div class="email-form">
+            <form method="POST" action="/predict">
+                <textarea name="content" cols="60" rows="15" placeholder="Enter your email text here" autocomplete="off"">{{ email }}</textarea>
+                <div class="button-group">
+                    <button type="submit" class="predict-button">Predict</button>
+                    <a href="/" class="reset-button">Reset</a>
+                </div>
+            </form>
+        </div>
+        <div class="prediction">
+            {% if prediction %}
+                {% if prediction == 1 %}
+                <h2 class="spam">Spam</h2>
+                {% else %}
+                <h2 class="not-spam">Not Spam</h2>
+                {% endif %}
+            {% endif %}
+        </div>
     </div>
 </body>
+<footer>
+    <p>Made with ❤️ by Rohit</p>
+</footer>
 </html>
